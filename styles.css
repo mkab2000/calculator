@@ -1,0 +1,183 @@
+body {
+    --background: #404762;
+    --display: #1b1f31;
+    --button-background: #282d42;
+    --button: #e7e3dc;
+    --button-border: #afa398;
+    --reset: #6b7295;
+    --reset-border: #484f71;
+    --equal: #b34e39;
+    --equal-border: #933f2d;
+    --button-text: #282d42;
+    --reset-text: white;
+    --equal-text: white;
+    background-color: var(--background);
+    color: white;
+    font-family: 'Proxima Nova Soft', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+body.light {
+    --background: #e6e6e6;
+    --display: #eeeeee;
+    --button-background: #d1cdcd;
+    --button: #e5e4e1;
+    --button-border: #a29f93;
+    --button-text: #282d42;
+    --reset: #587f85;
+    --reset-border: #3b5f64;
+    --equal: #ae5c22;
+    --equal-border: #753f15;
+    --reset-text: white;
+    --equal-text: white;
+    color: #34332c;
+}
+body.neon {
+    --background: #140928;
+    --display: #1a0d33;
+    --button-background: #1a0d33;
+    --button: #2f1f4a;
+    --button-border: #6a338c;
+    --button-text: #f1de5d;
+    --reset: #4b1d77;
+    --reset-border: #a644eb;
+    --equal: #83d9cf;
+    --equal-border: #aaf6f0;
+    --reset-text: #fdf7fe;
+    --equal-text: #1e3839;
+    color: #f1de5d;
+}
+
+#calculator {
+    margin: 3vh auto;
+    width: 480px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+#calculator > div {
+    margin: 10px 0;
+    border-radius: 15px;
+}
+#themes {
+    width: 100%;
+    height: 70px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+}
+#themes-left {
+    font-size: 30px;
+}
+#themes-right {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#themes-right > p {
+    font-size: 13px;
+}
+#themes-right > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#theme-buttons {
+    width: 80px;
+    height: 30px;
+    background-color: var(--button-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+.theme-button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.theme-button:hover {
+    cursor: pointer;
+}
+.theme-button p {
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+}
+
+/* ----what's shown---- */
+#value-display {
+    position: relative;
+    width: 100%;
+    background-color: var(--display);
+    height: 100px;
+}
+#value-display h1 {
+    position: absolute;
+    right: 25px;
+    font-size: 50px;
+    margin: 15px ;
+}
+
+/* ----numpad---- */
+#numberpad {
+    width: 100%;
+    height: 500px;
+    background-color: var(--button-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+#numberpad > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.calc-button {
+    width: 90px;
+    height: 60px;
+    background-color: var(--button);
+    color: var(--button-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 10px;
+    border-bottom: solid 4px var(--button-border);
+    font-weight: bold;
+}
+#del {
+    background-color: var(--reset);
+    border-bottom: solid 4px var(--reset-border);
+    font-size: 30px;
+    
+}
+#reset {
+    width: 205px;
+    background-color: var(--reset);
+    border-bottom: solid 4px var(--reset-border);
+    font-size: 30px;
+}
+#equal {
+    width: 205px;
+    background-color: var(--equal);
+    color: var(--equal-text);
+    border-bottom: solid 4px var(--equal-border);
+}
+#del, #reset {
+    color: var(--reset-text);
+}
+.calc-button:hover{
+    filter: brightness(120%);
+    cursor: pointer;
+}
