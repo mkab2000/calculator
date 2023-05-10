@@ -98,7 +98,7 @@ function changeTheme0() {
 ### Continued development
 
 The project is unfinished as of yet, some minor bugs and the lack of period functionality.
-Will likely rewrite calculator functionality from scratch.
+Will likely rewrite calculator functionality from scratch. Also, adjust the layout for mobile devices.
 
 
 ## Author
