@@ -41,42 +41,42 @@
     </div>
 
     <div id="value-display">
-      <h1 id="value">0</h1>
+      <input type="text" class="screen" id="currentDisplay" placeholder="0">
     </div>
 
     <div id="numberpad">
       <div>
-        <div class="calc-button num">7</div>
-        <div class="calc-button num">8</div>
-        <div class="calc-button num">9</div>
-        <div id="del" class="calc-button">
+        <div class="calc-button num" onclick="append('7')">7</div>
+        <div class="calc-button num" onclick="append('8')">8</div>
+        <div class="calc-button num" onclick="append('9')">9</div>
+        <div id="del" class="calc-button" onclick="detach()">
           DEL
         </div>
       </div>
       <div>
-        <div class="calc-button num">4</div>
-        <div class="calc-button num">5</div>
-        <div class="calc-button num">6</div>
-        <div class="calc-button operator">+</div>
+        <div class="calc-button num" onclick="append('4')">4</div>
+        <div class="calc-button num" onclick="append('5')">5</div>
+        <div class="calc-button num" onclick="append('6')">6</div>
+        <div class="calc-button operator" onclick="append('+')">+</div>
       </div>
       <div>
-        <div class="calc-button num">1</div>
-        <div class="calc-button num">2</div>
-        <div class="calc-button num">3</div>
-        <div class="calc-button operator">-</div>
+        <div class="calc-button num" onclick="append('1')">1</div>
+        <div class="calc-button num" onclick="append('2')">2</div>
+        <div class="calc-button num" onclick="append('3')">3</div>
+        <div class="calc-button operator" onclick="append('-')">-</div>
       </div>
       <div>
-        <div id="dot" class="calc-button">.</div>
-        <div class="calc-button num">0</div>
-        <div class="calc-button operator">/</div>
-        <div class="calc-button operator">x</div>
+        <div id="dot" class="calc-button" onclick="append('.')">.</div>
+        <div class="calc-button num" onclick="append('0')">0</div>
+        <div class="calc-button operator" onclick="append('/')">/</div>
+        <div class="calc-button operator" onclick="append('*')">x</div>
       </div>
 
       <div>
-        <div id="reset" class="calc-button">
+        <div id="reset" class="calc-button" onclick="reset()">
           RESET
         </div>
-        <div id="equal" class="calc-button">
+        <div id="equal" class="calc-button" onclick="calc()">
           =
         </div>
       </div>

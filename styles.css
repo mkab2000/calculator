@@ -13,6 +13,7 @@ body {
     --equal-text: white;
     background-color: var(--background);
     color: white;
+    --display-text: white;
     font-family: 'Proxima Nova Soft', sans-serif;
     font-weight: bold;
     display: flex;
@@ -32,6 +33,8 @@ body.light {
     --reset-text: white;
     --equal-text: white;
     color: #34332c;
+    --display-text: #34332c;
+
 }
 body.neon {
     --background: #140928;
@@ -47,6 +50,8 @@ body.neon {
     --reset-text: #fdf7fe;
     --equal-text: #1e3839;
     color: #f1de5d;
+    --display-text: #f1de5d;
+    
 }
 
 #calculator {
@@ -121,13 +126,17 @@ body.neon {
     background-color: var(--display);
     height: 100px;
 }
-#value-display h1 {
+#currentDisplay {
     position: absolute;
     right: 25px;
     font-size: 50px;
-    margin: 15px ;
+    margin: 15px;
+    text-align: end;
+    background-color: transparent;
+    width: 80%;
+    border: none;
+    color: var(--display-text);
 }
-
 /* ----numpad---- */
 #numberpad {
     width: 100%;
